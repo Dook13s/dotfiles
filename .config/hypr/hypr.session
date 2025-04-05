@@ -1,0 +1,4 @@
+[monitor 0;workspace 1 silent;move 11,41;size 1898,1028;;;;] /opt/zen-browser-bin/zen-bin
+[monitor 0;workspace 2 silent;move 966,41;size 943,1028;;;;] ghostty
+[monitor 0;workspace 2 silent;move 11,561;size 943,508;;;;] ghostty
+[monitor 0;workspace 2 silent;move 11,41;size 943,508;;;;] ghostty
