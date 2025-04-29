@@ -80,6 +80,7 @@ alias c='clear'
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(rbenv init -)"
 
 export PATH="/home/dook/.local/bin:$PATH"
 alias hyconf='nvim ~/.config/hypr/hyprland.conf'
@@ -97,4 +98,3 @@ alias noob='neofetch'
 alias :q='exec kill'
 alias la='ls -a'
 alias stoweverything='stow ~/.dotfiles'
-alias nvim='lvim'
