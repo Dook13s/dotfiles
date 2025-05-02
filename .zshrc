@@ -1,15 +1,8 @@
-eval "$(starship init zsh)"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Set the directory we want to store zinit and plugins
@@ -25,6 +18,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
+zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -40,11 +34,6 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-# Load completions
-autoload -Uz compinit && compinit
-
-zinit cdreplay -q
-
 # Keybindings
 bindkey -e
 bindkey '^p' history-search-backward
@@ -52,7 +41,7 @@ bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 
 # History
-HISTSIZE=5000
+HISTSIZE=1000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -80,7 +69,6 @@ alias c='clear'
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(rbenv init -)"
 
 export PATH="/home/dook/.local/bin:$PATH"
 alias hyconf='nvim ~/.config/hypr/hyprland.conf'
@@ -98,3 +86,10 @@ alias noob='neofetch'
 alias :q='exec kill'
 alias la='ls -a'
 alias stoweverything='stow ~/.dotfiles'
+alias editnixconf='sudo nvim /etc/nixos/configuration.nix'
+alias updatenix='sudo nixos-rebuild switch'
+alias cleannix='sudo nix-collect-garbage -d'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
