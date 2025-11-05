@@ -68,13 +68,6 @@
 
   // === Modules ===
 
-  "custom/ws": {
-    "format": "  ",
-    "tooltip": false,
-    "min-length": 3,
-    "max-length": 3
-  },
-
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace -1",
     "on-scroll-down": "hyprctl dispatch workspace +1",
@@ -96,7 +89,7 @@
     "rewrite": {
       // == Desktop ==
 
-      "": 
+      "":
         "<span foreground='#89b4fa'> </span> Hyprland",
 
       // == Terminal ==
@@ -109,59 +102,59 @@
 
       // == Browser ==
 
-      "(.*)Mozilla Firefox": 
+      "(.*)Mozilla Firefox":
         "<span foreground='#f38ba8'>󰈹 </span> Firefox",
-      "(.*) — Mozilla Firefox": 
+      "(.*) — Mozilla Firefox":
         "<span foreground='#f38ba8'>󰈹 </span> $1",
 
-      "(.*)Zen Browser": 
+      "(.*)Zen Browser":
         "<span foreground='#cdd6f4'>󰈹 </span> Zen Browser",
-      "(.*) — Zen Browser": 
+      "(.*) — Zen Browser":
         "<span foreground='#cdd6f4'>󰈹 </span> $1",
 
       // == Development ==
 
-      "(.*) - Visual Studio Code": 
+      "(.*) - Visual Studio Code":
         "<span foreground='#89b4fa'>󰨞 </span> $1",
-      "(.*)Visual Studio Code": 
+      "(.*)Visual Studio Code":
         "<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
 
-      "nvim": 
+      "nvim":
         "<span foreground='#a6e3a1'> </span> Neovim",
-      "nvim (.*)": 
+      "nvim (.*)":
         "<span foreground='#a6e3a1'> </span> $1",
 
-      "vim": 
+      "vim":
         "<span foreground='#a6e3a1'> </span> Vim",
-      "vim (.*)": 
+      "vim (.*)":
         "<span foreground='#a6e3a1'> </span> $1",
 
-      "Godot": 
+      "Godot":
         "<span foreground='#89b4fa'> </span> Godot Engine",
-      "Godot Engine - (.*)": 
+      "Godot Engine - (.*)":
         "<span foreground='#89b4fa'> </span> $1",
-      "(.*) - Godot Engine": 
+      "(.*) - Godot Engine":
         "<span foreground='#89b4fa'> </span> $1",
 
       // == Media ==
 
-      "(.*)Spotify": 
+      "(.*)Spotify":
         "<span foreground='#a6e3a1'> </span> Spotify",
-      "(.*)Spotify Premium": 
+      "(.*)Spotify Premium":
         "<span foreground='#a6e3a1'> </span> Spotify Premium",
 
-      "OBS(.*)": 
+      "OBS(.*)":
         "<span foreground='#a6adc8'>󰐌 </span> OBS Studio",
 
-      "VLC media player": 
+      "VLC media player":
         "<span foreground='#fab387'>󰕼 </span> VLC Media Player",
-      "(.*) - VLC media player": 
+      "(.*) - VLC media player":
         "<span foreground='#fab387'>󰕼 </span> $1",
 
-      "(.*) - mpv": 
+      "(.*) - mpv":
         "<span foreground='#cba6f7'> </span> $1",
 
-      "GNU Image Manipulation Program": 
+      "GNU Image Manipulation Program":
         "<span foreground='#a6adc8'> </span> GNU Image Manipulation Program",
 
       "qView": "  qView",
@@ -172,32 +165,32 @@
 
       // == Social ==
 
-      "vesktop": 
+      "vesktop":
         "<span foreground='#89b4fa'> </span> Discord",
 
       "• Discord(.*)": "Discord$1",
-      "(.*)Discord(.*)": 
+      "(.*)Discord(.*)":
         "<span foreground='#89b4fa'> </span> $1Discord$2",
 
       // == Documents ==
 
-      "ONLYOFFICE Desktop Editors": 
+      "ONLYOFFICE Desktop Editors":
         "<span foreground='#f38ba8'> </span> OnlyOffice Desktop",
 
-      "(.*).docx": 
+      "(.*).docx":
         "<span foreground='#89b4fa'> </span> $1.docx",
-      "(.*).xlsx": 
+      "(.*).xlsx":
         "<span foreground='#a6e3a1'> </span> $1.xlsx",
-      "(.*).pptx": 
+      "(.*).pptx":
         "<span foreground='#fab387'> </span> $1.pptx",
-      "(.*).pdf": 
+      "(.*).pdf":
         "<span foreground='#f38ba8'> </span> $1.pdf",
 
       "/": "  File Manager",
 
       // == System ==
 
-      "Timeshift-gtk": 
+      "Timeshift-gtk":
         "<span foreground='#a6e3a1'> </span> Timeshift",
 
       "Authenticate": "  Authenticate"
@@ -247,7 +240,7 @@
   },
 
   "custom/distro": {
-    "format": " ",
+    "format": " ",
     "tooltip": false
   },
 
@@ -283,11 +276,11 @@
       "on-click-right": "mode",
 
       "format": {
-        "months": 
+        "months":
           "<span color='#b4befe'><b>{}</b></span>",
-        "weekdays": 
+        "weekdays":
           "<span color='#a6adc8' font='7'>{}</span>",
-        "today": 
+        "today":
           "<span color='#f38ba8'><b>{}</b></span>"
       }
     },
@@ -319,15 +312,15 @@
     "format-connected": "󰂱",
     "format-connected-battery": "󰂱",
 
-    "tooltip-format": 
+    "tooltip-format":
       "{num_connections} connected",
-    "tooltip-format-disabled": 
+    "tooltip-format-disabled":
       "Bluetooth Disabled",
-    "tooltip-format-connected": 
+    "tooltip-format-connected":
       "{num_connections} connected\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
+    "tooltip-format-enumerate-connected":
       "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
+    "tooltip-format-enumerate-connected-battery":
       "{device_alias}: {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",

@@ -1,0 +1,15 @@
+{
+  "position": "top-right",
+  "layer": "overlay",
+  "css": "~/.config/swaync/style.css",
+  "widgets": ["inhibitors", "notifications"],
+  "timeout": 4000,
+  "notification-limit": 5,
+  "widget-config": {
+    "notifications": {
+      "actions": true,
+      "max-icon-size": 48
+    }
+  }
+}
+
